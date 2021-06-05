@@ -1,0 +1,28 @@
+<div class="alert alert-primary">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h3
+          class="app-clickable"
+          [routerLink]="['home']"
+          (click)="queryTerm = ''"
+        >
+          Movie Browser
+        </h3>
+      </div>
+      <div class="col-md-8">
+        <form (submit)="submitHandler($event)">
+          <input
+            type="text"
+            name="queryTerm"
+            id=""
+            autofocus
+            [(ngModel)]="queryTerm"
+            class="form-control"
+            placeholder="Search movies..."
+          />
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
